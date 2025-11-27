@@ -131,14 +131,19 @@ class CqhyxkClient:
 
         Args:
             request (IdentityPageRequest): 人员身份信息分页查询请求参数
+            
+                ```
                 - current: 当前页（可选，默认为0）
                 - size: 页面大小（可选，默认为10）
                 - updateTimeStart: 更新时间 - 开始（可选）
                 - updateTimeEnd: 更新时间 - 结束（可选）
                 - sourceUserId: 源系统用户 id（学工号，可选）
+                ```
 
         Returns:
             IdentityPageResponse: 人员身份信息分页响应
+            
+                ```
                 - code: 状态码（200表示成功）
                 - message: 状态描述
                 - data: 响应数据
@@ -162,8 +167,11 @@ class CqhyxkClient:
                         - dataMap: 人员身份信息详情
                         - updateTime: 更新时间
                     - empty: 空标识
+                ```
 
         Response Example:
+        
+        .. code-block:: json
             {
                 "code": "00000000",
                 "message": "请求成功",
@@ -226,6 +234,8 @@ class CqhyxkClient:
 
         Returns:
             FacePhotosResponse: 人脸照片响应
+
+                ```
                 - code: 状态码（200表示成功）
                 - message: 状态描述
                 - data: 响应数据
@@ -234,8 +244,11 @@ class CqhyxkClient:
                         - face_factory: 人脸服务厂商
                         - face_id: 人脸照 id，对接方可用于区分是否变更
                         - image_base64: 照片（Base64 编码）
+                ```
 
         Response Example:
+
+        .. code-block:: json
             {
                 "code": "00000000",
                 "message": "请求成功",
@@ -268,6 +281,8 @@ class CqhyxkClient:
 
         Returns:
             OrgListResponse: 组织列表响应
+
+                ```
                 - code: 状态码（200表示成功）
                 - message: 状态描述
                 - data: 响应数据
@@ -283,8 +298,11 @@ class CqhyxkClient:
                         - level: 组织层级
                         - internal: 是否校内组织（true: 校内组织，false: 非校内）
                         - updateTime: 更新时间
+                ```
 
         Response Example:
+
+        .. code-block:: json
             {
                 "code": "00000000",
                 "message": "请求成功",
@@ -329,6 +347,8 @@ class CqhyxkClient:
 
         Returns:
             TagListResponse: 标签列表响应
+
+                ```
                 - code: 状态码（200表示成功）
                 - message: 状态描述
                 - data: 响应数据
@@ -342,8 +362,11 @@ class CqhyxkClient:
                         - status: 状态
                         - updateTime: 更新时间
                         - entityType: 实体类型
+                ```
 
         Response Example:
+
+        .. code-block:: json
             {
                 "code": "00000000",
                 "message": "请求成功",
@@ -379,15 +402,20 @@ class CqhyxkClient:
 
         Args:
             request (MemberTagPageRequest): 人员标签关系分页参数
+
+                ```
                 - current: 当前页（可选，默认为0）
                 - size: 页面大小（可选，默认为10）
                 - updateTimeStart: 更新时间 - 开始（可选）
                 - updateTimeEnd: 更新时间 - 结束（可选）
                 - sourceUserId: 源系统用户 id（学工号，可选）
                 - tagId: 标签 id（可选）
+                ```
 
         Returns:
             MemberTagPageResponse: 人员标签关系分页响应
+
+                ```
                 - code: 状态码（200表示成功）
                 - message: 状态描述
                 - data: 响应数据
@@ -401,8 +429,11 @@ class CqhyxkClient:
                         - tagName: 标签名称
                         - tagCode: 标签编码
                     - empty: 空标识
+                ```
 
         Response Example:
+
+        .. code-block:: json
             {
                 "code": "00000000",
                 "message": "请求成功",
@@ -435,17 +466,25 @@ class CqhyxkClient:
 
         Args:
             request (SubscriptionRequest): 新增事件订阅请求参数
+
+                ```
                 - eventType: 事件类型（1: 人员变动事件, 2: 组织变动事件, 3: 标签变动事件, 4: 标签成员变动事件）
                 - callbackUrl: 事件推送的回调地址
+                ```
 
         Returns:
             SubscriptionResponse: 事件订阅响应
+
+                ```
                 - code: 状态码（200表示成功）
                 - message: 状态描述
                 - data: 响应数据
                     - result: 返回结果
+                ```
 
         Response Example:
+
+        .. code-block:: json
             {
                 "code": "00000000",
                 "message": "请求成功",
@@ -468,11 +507,16 @@ class CqhyxkClient:
 
         Returns:
             CommonResponse: 通用响应
+
+                ```
                 - code: 状态码（200表示成功）
                 - message: 状态描述
                 - data: 响应数据（空对象）
+                ```
 
         Response Example:
+
+        .. code-block:: json
             {
                 "code": "00000000",
                 "message": "请求成功",
